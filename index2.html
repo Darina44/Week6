@@ -7,46 +7,67 @@
     <title>Document</title>
     <style>
         .header {
-            background: darkcyan;
+            background: rgb(199, 202, 202);
             grid-area: header;
-        }
-
-        .sidebar {
-            background: chartreuse;
-            grid-area: sidebar;
+            text-align: center;
+            padding-top: 22px;
         }
 
         .main {
-            background: chocolate;
+            background: rgb(253, 237, 193);
             grid-area: main;
+            text-align: center;
         }
 
-        .footer {
-            background: cornflowerblue;
-            grid-area: footer;
+        .aside {
+            background: rgb(207, 226, 188);
+            grid-area: aside;
+            text-align: center;
+            padding-top: 22px;
+        }
 
+
+        .footer {
+            background: rgb(199, 202, 202);
+            grid-area: footer;
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .section {
+            background: rgb(245, 242, 239);
+            height: 60%;
+            width: 20vw;
         }
 
         .container {
             display: grid;
-            grid-template-columns: 1fr 3fr;
+            grid-template-columns: 2fr 1fr;
             grid-template-rows: 10% 1fr 10%;
-            height: 90vh;
-            grid-template-areas: "header header header header"
-                "sidebar main main main"
-                "footer footer footer footer";
+            height: 95vh;
+            grid-template-areas: "header header header"
+                "main main aside"
+                "footer footer footer";
 
         }
     </style>
 </head>
 
 <body>
-    <h1>Гриды</h1>
     <div class="container">
-        <header class="header">header</header>
-        <aside class="sidebar">sidebar</aside>
-        <main class="main">content</main>
-        <footer class="footer">footer</footer>
+        <header class="header">[Шапка страницы]</header>
+        <aside class="aside">[Боковая область]</aside>
+        <main class="main">[Основная часть]</main>
+        <footer class="footer">
+            <section class="section">[Секция футера 1]</section>
+            <section class="section">[Секция футера 2]</section>
+            <section class="section">[Секция футера 3]</section>
+            <section class="section">[Секция футера 4]</section>
+        </footer>
     </div>
 </body>
 
